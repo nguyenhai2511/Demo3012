@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 @Controller
 public class HomeController {
     @RequestMapping("/")
-    public String index(@RequestParam(required = false) double kinhdo, @RequestParam(required = false) double vido, Model  model){
+    public String index(@RequestParam(required = false, defaultValue = "-118.270293") double kinhdo, @RequestParam(required = false, defaultValue = "34.039737") double vido, Model  model){
         model.addAttribute("kinhdo",kinhdo);
         model.addAttribute("vido",vido);
         return "index";
